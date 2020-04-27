@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --open & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,10 +25,21 @@
     "@babel/node": "^7.8.7",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
-    "nodemon": "^2.0.3",
+    "mongoose": "^5.9.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "webpack": "^4.43.0"
+    "webpack-dev-server": "^3.10.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "nodemon": "^2.0.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }

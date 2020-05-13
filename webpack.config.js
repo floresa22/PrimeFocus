@@ -8,7 +8,7 @@ module.exports = {
   },
   devServer: {
     host: "localhost",
-    port: 9090,
+    port: 8080,
     // match the output path
     contentBase: path.resolve(__dirname, "client"),
     // enable HMR on the devServer
@@ -31,7 +31,7 @@ module.exports = {
       "/api/**": "http://localhost:5000",
     },
   },
-  modele: {
+  module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -40,6 +40,10 @@ module.exports = {
         query: {
           presets: ["@babel/preset-env", "@babel/preset-react"],
         },
+      },
+      {
+        test: /\.css$/,
+        loaders: ["style-loader", "css-loader"],
       },
     ],
   },

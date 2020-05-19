@@ -3,7 +3,7 @@ const StudyLog = require("../models/studyLogModel");
 
 router.route("/").get((req, res) => {
   StudyLog.find()
-    .then((logs) => res.json(exercises))
+    .then((studyLogs) => res.json(studyLogs))
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 

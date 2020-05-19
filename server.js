@@ -21,6 +21,7 @@ const uri = process.env.MONGO_URI;
 
 mongoose
   .connect(uri, {
+    useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
